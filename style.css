@@ -1,0 +1,323 @@
+/* ===== 1. SPREMENLJIVKE (tu spreminjaš barve, pisave in velikosti) ===== */
+:root {
+  /* barve */
+  --barva-ozadje: #F8E0F7;
+  --barva-besedilo: #1B1418;
+  --barva-naslov: #140E12;
+  --barva-oznaka: #4A4350;
+  --barva-slogan: #4B3FA0;
+  --barva-gumb: #140E12;
+  --barva-gumb-hover: #3B2B39;
+  --barva-gumb-besedilo: #FFFFFF;
+  --barva-foto: #EBC9E6;
+  --barva-foto-besedilo: #5A4458;
+  --barva-obroba-polja: #8C7A8A;
+  --barva-crta: #D9B9D6;
+
+  /* pisave */
+  --pisava-besedilo: 'Cormorant Garamond', Georgia, serif;
+  --pisava-naslov: 'Abril Fatface', Georgia, serif;
+  --pisava-logo: 'Jost', sans-serif;
+
+  /* velikosti besedila */
+  --velikost-besedilo: 21px;
+  --velikost-h1: 52px;
+
+  /* postavitev */
+  --sirina-vsebine: 1100px;
+  --razmik-odseka: 72px;
+}
+
+/* ===== 2. OSNOVA ===== */
+body {
+  margin: 0;
+  font-family: var(--pisava-besedilo);
+  font-size: var(--velikost-besedilo);
+  line-height: 1.55;
+  color: var(--barva-besedilo);
+  background: var(--barva-ozadje);
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-family: var(--pisava-naslov);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--barva-naslov);
+}
+
+p { margin: 0; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.vsebina {
+  max-width: var(--sirina-vsebine);
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.odsek { padding: var(--razmik-odseka) 0; }
+
+/* ===== 3. GLAVA IN MENI ===== */
+.glava-vrstica {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.logo {
+  font-family: var(--pisava-logo);
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.meni {
+  display: flex;
+  gap: 26px;
+  font-size: 22px;
+}
+
+.meni a:hover { text-decoration: underline; }
+
+/* ===== 4. SKUPNI ELEMENTI ===== */
+.oznaka {
+  margin-bottom: 10px;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--barva-oznaka);
+}
+
+.oznaka-mala {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.gumb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 0 44px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--barva-gumb);
+  color: var(--barva-gumb-besedilo);
+  font-family: var(--pisava-naslov);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.gumb:hover { background: var(--barva-gumb-hover); }
+
+.gumb-majhen {
+  min-height: 48px;
+  padding: 0 28px;
+  font-size: 18px;
+}
+
+.foto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 18px;
+  background: var(--barva-foto);
+  color: var(--barva-foto-besedilo);
+}
+
+.dva-stolpca {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.dva-stolpca-sredina { align-items: center; }
+
+.trije-stolpci {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+/* ===== 5. DOMOV ===== */
+.odsek-domov { padding: 72px 0 56px; }
+
+.oznaka-domov {
+  font-size: 24px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: var(--velikost-h1);
+}
+
+.slogan {
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-style: italic;
+  color: var(--barva-slogan);
+}
+
+.uvod { margin-bottom: 18px; }
+.uvod-zadnji { margin-bottom: 32px; }
+
+.foto-naslovna {
+  width: 100%;
+  height: 420px;
+  margin-top: 44px;
+}
+
+/* ===== 6. O MENI ===== */
+.foto-o-nas {
+  width: 100%;
+  aspect-ratio: 1 / 1.02;
+}
+
+.naslov-o-nas {
+  margin-bottom: 22px;
+  font-size: 46px;
+}
+
+.besedilo { margin-bottom: 20px; }
+
+/* ===== 7. STORITVE ===== */
+.glava-odseka { margin-bottom: 28px; }
+
+.naslov-storitve { font-size: 36px; }
+
+.foto-storitev {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+}
+
+.naslov-kartice {
+  margin: 14px 0 6px;
+  font-size: 26px;
+}
+
+/* ===== 8. NOVICE ===== */
+.naslov-novice {
+  margin-bottom: 14px;
+  font-size: 40px;
+}
+
+.podnaslov {
+  margin-bottom: 28px;
+  font-style: italic;
+  color: var(--barva-oznaka);
+}
+
+.clanek {
+  display: grid;
+  grid-template-columns: 266px 1fr;
+  gap: 64px;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.foto-clanek { width: 266px; }
+.foto-clanek-lasje { height: 205px; }
+.foto-clanek-licenje { height: 264px; }
+.foto-clanek-nohti { height: 139px; }
+
+.naslov-clanka { font-size: 36px; }
+
+/* ===== 9. KONTAKT ===== */
+.odsek-kontakt { padding: 72px 0 96px; }
+
+.naslov-kontakt {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.kontakt-podatki p { margin-bottom: 20px; }
+.kontakt-podatki p:last-child { margin-bottom: 0; }
+
+.podcrtano { text-decoration: underline; }
+
+.obrazec {
+  display: grid;
+  gap: 20px;
+}
+
+.obrazec label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.obrazec input,
+.obrazec select,
+.obrazec textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 14px;
+  box-sizing: border-box;
+  border: 1px solid var(--barva-obroba-polja);
+  border-radius: 6px;
+  background: #FFFFFF;
+  font: 400 18px var(--pisava-besedilo);
+  color: var(--barva-besedilo);
+}
+
+/* ===== 10. NOGA ===== */
+.noga {
+  padding: 28px 24px;
+  text-align: center;
+  font-size: 17px;
+  border-top: 1px solid var(--barva-crta);
+}
+
+/* ===== 11. TELEFON IN TABLICA (do 860 px) ===== */
+@media (max-width: 860px) {
+  body { font-size: 19px; }
+
+  .dva-stolpca,
+  .trije-stolpci,
+  .clanek {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .glava-vrstica {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .meni {
+    flex-wrap: wrap;
+    gap: 6px 20px;
+  }
+
+  h1 { font-size: 40px; }
+  h2 { font-size: 32px; }
+
+  .odsek,
+  .odsek-domov,
+  .odsek-kontakt {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .foto-clanek {
+    width: 100%;
+    height: auto;
+    min-height: 180px;
+  }
+}
